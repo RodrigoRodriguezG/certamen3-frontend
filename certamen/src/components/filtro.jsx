@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from "prop-types"
 
 const Filtro = ({ onFiltrar }) => {
   const [valor, setValor] = useState("")
@@ -39,6 +40,10 @@ const Filtro = ({ onFiltrar }) => {
       {errorMsg && <span className="error-msg">{errorMsg}</span>}
     </div>
   )
+}
+
+Filtro.propTypes = {
+  onFiltrar: PropTypes.func.isRequired
 }
 
 export default Filtro

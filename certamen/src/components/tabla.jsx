@@ -1,5 +1,6 @@
 import React from 'react'
 import Fila from './fila'
+import PropTypes from 'prop-types'
 
 const Tabla = ({ datos, prioritarios, onTogglePrioridad }) => {
   return (
@@ -27,6 +28,12 @@ const Tabla = ({ datos, prioritarios, onTogglePrioridad }) => {
       </tbody>
     </table>
   )
+}
+
+Tabla.propTypes = {
+  datos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  prioritarios: PropTypes.arrayOf(PropTypes.number).isRequired,
+  onTogglePrioridad: PropTypes.func.isRequired
 }
 
 export default Tabla
