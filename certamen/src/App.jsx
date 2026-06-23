@@ -1,15 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import Tabla from "./components/tabla.jsx"
+import Fila from "./components/fila.jsx"
+import Filtro from "./components/filtro.jsx"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      
+      <main>
+        <div className='div-input'>
+          <Filtro />
+        </div>
+
+        <div className='div-tabla'>
+          <Tabla/>
+        </div>
+
+      </main>
     </>
   )
 }
