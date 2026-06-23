@@ -1,7 +1,7 @@
 import React from 'react'
 import Fila from './fila'
 
-const Tabla = ({ datos }) => {
+const Tabla = ({ datos, prioritarios, onTogglePrioridad }) => {
   return (
     <table>
       <thead>
@@ -17,7 +17,12 @@ const Tabla = ({ datos }) => {
       </thead>
       <tbody>
         {datos.map((fila) => (
-          <Fila key={fila.id} {...fila} />
+          <Fila
+            key={fila.id}
+            {...fila}
+            esPrioritario={prioritarios.includes(fila.id)}
+            onTogglePrioridad={onTogglePrioridad}
+          />
         ))}
       </tbody>
     </table>

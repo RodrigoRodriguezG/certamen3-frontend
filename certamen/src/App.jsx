@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchDesembarques = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/desembarques`)
+        const res = await fetch(`${import.meta.env.VITE_API_URL}`)
         if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`)
         const data = await res.json()
         setDatos(data)
